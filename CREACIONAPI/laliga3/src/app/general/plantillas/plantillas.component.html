@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div class="table-container">
+    <table class="table">
+        <caption>
+            <h1>Plantillas</h1>
+        </caption>
+        <thead>
+            <tr>
+                <th>Escudo</th>
+                <th>Club (Abreviatura)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="colortr" *ngFor="let equipo of equipos; let i = index">
+                <td><img src="../../../assets/{{ equipo.Escudo }}" width="35px"></td>
+                <td (click)="redirectToPage(equipo.EquipoID)">{{ equipo.Nombre }} ({{ equipo.Abrebiatura }})</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

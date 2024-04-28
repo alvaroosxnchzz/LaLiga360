@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<div class="table-container">
+    <table class="table">
+        <caption>
+            <h2>Información de Jugadores Españoles</h2>
+            <p>(Jugadores Españoles de LaLiga.)</p>
+        </caption>
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th>Goles</th>
+                <th>Partidos Jugados</th>
+                <th>Edad</th>
+                <th>Posicion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let jugador of jugadoresEspanoles; let i = index" class="colortr" (click)="irADetalles(jugador.idJugador)">
+                <td><img src="../../../assets/{{ jugador.foto }}" width="50px" style="border-radius: 40px; border: 2px solid gray;"></td>
+                <td>{{ jugador.nombre }}</td>
+                <td>{{ jugador.goles }}</td>
+                <td>{{ jugador.jugados }}</td>
+                <td>{{ jugador.edad }}</td>
+                <td>{{ jugador.posicion }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

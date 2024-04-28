@@ -1,0 +1,77 @@
+/* Aplica los estilos de la tabla proporcionados */
+
+.table {
+    font-family: 'Arial', sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    border-left: 1px solid rgb(228, 228, 228);
+    border-right: 1px solid rgb(228, 228, 228);
+}
+
+table caption {
+    background-color: #ff7171;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ff7171;
+}
+
+.colortr {
+    background-color: #dfdfdf;
+    cursor: pointer;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.colortd {
+    color: white;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #949494;
+}
+
+.table th,
+.table td:first-child {
+    min-width: 50px;
+}
+
+.table td:first-child {
+    text-align: center;
+}
+
+/* Estilos específicos para las primeras columnas */
+.table th:first-child,
+.table td:first-child {
+    border-left: none;
+}
+
+/* Estilos específicos para las últimas columnas */
+.table th:last-child,
+.table td:last-child {
+    border-right: none;
+}
+
+.table-container {
+    display: flex;
+    margin-top: 220px; /* Ajusta según sea necesario */
+    justify-content: center;
+}
+
+.gray-text {
+    background-color: #bcbcbc;
+}

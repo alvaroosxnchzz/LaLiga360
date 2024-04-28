@@ -1,0 +1,142 @@
+.table {
+    font-family: 'Arial', sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    border-left: 1px solid rgb(228, 228, 228);
+    border-right: 1px solid rgb(228, 228, 228);
+}
+
+table caption {
+    background-color: #ff7171;
+    /* Color de fondo gris oscuro */
+    color: white;
+    /* Color de texto blanco */
+    font-size: 24px;
+    /* Tamaño de fuente */
+    text-align: center;
+    /* Alineación centrada */
+    border: 1px solid #ff7171;
+    /* Bordes */
+}
+
+.colortr {
+    background-color: #dfdfdf;
+    cursor: pointer;
+}
+
+.table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.colortd {
+    color: white;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #949494;
+}
+
+.table th,
+.table td:first-child {
+    min-width: 50px;
+}
+
+.table td:first-child {
+    text-align: center;
+}
+
+/* Estilos específicos para las primeras columnas */
+.table th:first-child,
+.table td:first-child {
+    border-left: none;
+}
+
+/* Estilos específicos para las últimas columnas */
+.table th:last-child,
+.table td:last-child {
+    border-right: none;
+}
+
+.table-container {
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+    /* Ajusta según la altura de tu header */
+}
+
+
+.gray-text {
+    background-color: #bcbcbc;
+    /* Color de texto gris */
+}
+
+.legend-row {
+    display: table-row;
+    background-color: #dfdfdf;
+}
+
+
+
+.legend h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* equipos.component.css */
+
+.legend-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.legend-item span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.legend-item img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    display: block; /* Para evitar cualquier margen residual */
+    margin: auto;
+}
+
+
+.legend-item span:hover {
+    border-color: #666;
+}

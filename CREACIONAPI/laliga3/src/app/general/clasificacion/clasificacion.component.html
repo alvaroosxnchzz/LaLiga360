@@ -1,0 +1,83 @@
+<app-header></app-header>
+<!-- equipos.component.html -->
+<div class="table-container">
+    <table class="table">
+        <caption>
+            <h1>CLASIFICACIÓN</h1>
+        </caption>
+        <thead>
+            <tr>
+                <th>Pos.</th>
+                <th>Club</th>
+                <th>Puntos</th>
+                <th>PJ</th>
+                <th>PG</th>
+                <th>PE</th>
+                <th>PP</th>
+                <th>GF</th>
+                <th>GC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="colortr" *ngFor="let equipo of equipos; let i = index">
+                <td class="colortd" [style.background-color]="getColorForPosition(i + 1)"
+                    [class.gray-text]="!getColorForPosition(i + 1)">{{ i + 1 }}</td>
+                <td (click)="redirectToPage(equipo.Nombre)"><img src="../../../assets/{{ equipo.Escudo }}" width="20px">{{ equipo.Nombre }}</td>
+                <td>{{ equipo.Puntos }}</td>
+                <td>{{ equipo.PartidosJugados }}</td>
+                <td>{{ equipo.PartidosGanados }}</td>
+                <td>{{ equipo.PartidosEmpatados }}</td>
+                <td>{{ equipo.PartidosPerdidos }}</td>
+                <td>{{ equipo.GolesFavor }}</td>
+                <td>{{ equipo.GolesContra }}</td>
+            </tr>
+            <tr class="legend-row">
+                <td colspan="9"> <!-- colspan="9" para que la celda ocupe todas las columnas -->
+                    <div class="legend">
+                        <h2>Leyenda:</h2>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <span style="background-color: #abe139;">
+                                    <img loading="lazy" class="legend-image"
+                                        src="https://cdn.resfu.com/media/img/legends/ic_17w.png" alt="Campeón de Liga">
+                                </span> Campeón de Liga
+                            </div>
+                            <div class="legend-item">
+                                <span style="background-color: #4acb2a;">
+                                    <img loading="lazy" class="legend-image"
+                                        src="https://cdn.resfu.com/media/img/legends/ic_5w.png" alt="Champions League">
+                                </span> Champions League
+                            </div>
+                            <div class="legend-item">
+                                <span style="background-color: #38d996;">
+                                    <img loading="lazy" class="legend-image"
+                                        src="https://cdn.resfu.com/media/img/legends/ic_3w.png" alt="Europa League">
+                                </span> Europa League
+                            </div>
+                            <div class="legend-item">
+                                <span style="background-color: #5694d8;">
+                                    <img loading="lazy" class="legend-image"
+                                        src="https://cdn.resfu.com/media/img/legends/ic_45w.png"
+                                        alt="Fase Previa Conference League">
+                                </span> Fase Previa Conference League
+                            </div>
+                            <div class="legend-item">
+                                <span style="background-color: #bcbcbc;">
+                                    <img loading="lazy" class="legend-image"
+                                        src="https://cdn.resfu.com/media/img/legends/ic_50w.png" alt="Permanencia">
+                                </span> Permanencia
+                            </div>
+                            <div class="legend-item">
+                                <span style="background-color: #ed3b46;">
+                                    <img loading="lazy" class="legend-image"
+                                        src="https://cdn.resfu.com/media/img/legends/ic_2w.png" alt="Descenso">
+                                </span> Descenso
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

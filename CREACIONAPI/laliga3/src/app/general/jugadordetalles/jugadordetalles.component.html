@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container">
+    <div class="container2" *ngIf="jugador">
+        <table class="team-details">
+            <caption>
+                <h2><strong>{{ jugador.Nombre }}</strong></h2> <img src="../../../assets/{{ jugador.FotoJugador }}" style="border-radius: 100px; border: 2px solid gray;">
+            </caption>
+            <tr>
+                <td>Nacionalidad:</td>
+                <td>{{ jugador.Nacionalidad }}</td>
+            </tr>
+            <tr>
+                <td>Edad:</td>
+                <td>{{ jugador.Edad }}</td>
+            </tr>
+            <tr>
+                <td>Posicion:</td>
+                <td>{{ jugador.Posicion }}</td>
+            </tr>
+            <tr>
+                <td>Partidos Jugados:</td>
+                <td>{{ jugador.PartidosJugados }}</td>
+            </tr>
+            <tr>
+                <td> <img src="../../../assets/amarilla.png" alt="amarilla" width="30px"></td>
+                <td>{{ jugador.TarjetasAmarillas }}</td>
+            </tr>
+            <tr>
+                <td><img src="../../../assets/roja.png" alt="roja" width="30px"></td>
+                <td>{{ jugador.TarjetasRojas }}</td>
+            </tr>
+            <tr>
+                <td><img src="../../../assets/gol.png" alt="gol" width="25px"></td>
+                <td>{{ jugador.Goles }}</td>
+            </tr>
+            <tr>
+                <td><img src="../../../assets/asistencia.png" alt="gol" width="30px"></td>
+                <td>{{ jugador.Asistencias }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" *ngIf="!jugador">
+        <p>El jugador no ha sido encontrado.</p>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div class="table-container">
+    <table class="table">
+        <caption>
+            <h1>Plantillas</h1>
+        </caption>
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="colortr" *ngFor="let jugador of jugadores; let i = index" (click)="irADetalles(jugador.idJugador)">
+                <td><img src="../../../assets/{{ jugador.foto }}" width="50px" style="border-radius: 100px; border: 2px solid gray;"></td>
+                <td>{{ jugador.nombre }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

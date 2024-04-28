@@ -1,0 +1,75 @@
+<app-header></app-header>
+<div class="botonback">
+    <div class="button-borders">
+        <button (click)="redirect()" class="primary-button"> Volver
+        </button>
+    </div>
+</div>
+<div class="container">
+    <div class="container2" *ngIf="equipo">
+        <table class="team-details">
+            <caption>
+                <h2>Informacion {{ equipo.Nombre }}</h2> <img src="../../../assets/{{ equipo.Escudo }}">
+            </caption>
+            <tr>
+                <td>Abreviatura:</td>
+                <td>{{ equipo.Abrebiatura }}</td>
+            </tr>
+            <tr>
+                <td>Puntos:</td>
+                <td>{{ equipo.Puntos }}</td>
+            </tr>
+            <tr>
+                <td>Posicion:</td>
+                <td>{{ equipo.Posicion }} º</td>
+            </tr>
+            <tr>
+                <td>Partidos Jugados:</td>
+                <td>{{ equipo.PartidosJugados }}</td>
+            </tr>
+            <tr>
+                <td>Partidos Ganados:</td>
+                <td>{{ equipo.PartidosGanados }}</td>
+            </tr>
+            <tr>
+                <td>Partidos Empatados:</td>
+                <td>{{ equipo.PartidosEmpatados }}</td>
+            </tr>
+            <tr>
+                <td>Partidos Perdidos:</td>
+                <td>{{ equipo.PartidosPerdidos }}</td>
+            </tr>
+            <tr>
+                <td>Goles a favor:</td>
+                <td>{{ equipo.GolesFavor }}</td>
+            </tr>
+            <tr>
+                <td>Goles en contra:</td>
+                <td>{{ equipo.GolesContra }}</td>
+            </tr>
+            <tr>
+                <td>Ciudad:</td>
+                <td>{{ equipo.Ciudad }}</td>
+            </tr>
+            <tr>
+                <td>Año de fundación:</td>
+                <td>{{ equipo.Fundacion }}</td>
+            </tr>
+            <tr>
+                <td>Estadio:</td>
+                <td>{{ equipo.Estadio }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><img src="../../../assets/{{equipo.FotoEstadio}}" width="600px"></td>
+            </tr>
+            <tr>
+                <td><a class="eenlace" href="plantillas">Ir a plantillas</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container" *ngIf="!equipo">
+        <p>El equipo no ha sido encontrado.</p>
+    </div>
+</div>

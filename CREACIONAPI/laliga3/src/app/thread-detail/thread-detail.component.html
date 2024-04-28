@@ -1,0 +1,37 @@
+<div class="thread-detail-container">
+    <div *ngIf="!error">
+        <div *ngIf="thread">
+            <h2>{{ thread.title }}</h2>
+            <p>{{ thread.description }}</p>
+            <button *ngIf="esAdmin()" (click)="eliminarHilo(thread.id)">Eliminar</button>
+            <!-- Agregar aquí lógica para mostrar otros detalles del hilo de discusión si es necesario -->
+
+            <!-- Formulario para agregar comentarios -->
+            <form class="comment-form" (ngSubmit)="addComment()" #commentForm="ngForm">
+                <textarea [(ngModel)]="newCommentText" name="commentText" required
+                    placeholder="Escribe tu comentario aquí"></textarea>
+                <div *ngIf="commentForm.controls['commentText'].invalid && commentForm.controls['commentText'].touched"
+                    class="error-message">El comentario es obligatorio</div>
+                <button type="submit" [disabled]="commentForm.invalid">Enviar comentario</button>
+            </form>
+
+            <!-- Lista de comentarios -->
+            <div *ngIf="thread.comments && thread.comments.length > 0">
+                <h3>Comentarios:</h3>
+                <div class="comment" *ngFor="let comment of thread.comments">
+                    <p>{{ comment.text }}</p>
+                    <button (click)="deleteComment(comment.id)">Eliminar</button>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="!thread">
+            <p>No se encontró el hilo de discusión.</p>
+        </div>
+    </div>
+
+    <div *ngIf="error">
+        <p>{{ error }}</p>
+    </div>
+    
+</div>

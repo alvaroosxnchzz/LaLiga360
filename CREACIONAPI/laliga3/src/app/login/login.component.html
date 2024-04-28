@@ -1,0 +1,35 @@
+<div class="container">
+  <div id="contenedorcentrado">
+    <div id="login">
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <label for="usuario">Email</label>
+        <input id="usuario" type="text" formControlName="email" placeholder="Usuario">
+        <div *ngIf="loginForm.get('usuario')?.invalid && loginForm.get('usuario')?.touched">
+          <span *ngIf="loginForm.get('usuario')?.errors?.['required']">Email requerido.</span>
+        </div>
+
+        <label for="password">Contraseña</label>
+        <input id="password" type="password" formControlName="pass" placeholder="Contraseña">
+        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+          <span *ngIf="loginForm.get('password')?.errors?.['required']">Contraseña requerida.</span>
+        </div>
+        <div class="botoncillo">
+          <button>
+            Entrar
+            <div class="arrow-wrapper">
+              <div class="arrow"></div>
+            </div>
+          </button>
+        </div>
+
+      </form>
+    </div>
+    <div id="derecho">
+      <img alt="imagen" src="../../assets/icono1.png" width="250px">
+      <hr>
+      <div class="pie-form">
+        <a href="register">¿No tienes Cuenta? Registrate</a>
+      </div>
+    </div>
+  </div>
+</div>

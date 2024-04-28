@@ -1,0 +1,63 @@
+/* thread-list.component.css */
+.container {
+    justify-content: center;
+    display: flex;
+}
+.thread-container {
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 155px;
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+}
+.h1cont{
+    justify-content: center;
+    display: flex;
+}
+
+.thread-container h1 {
+    color: rgb(0, 0, 0);
+}
+
+.thread-item {
+    margin-bottom: 10px;
+}
+
+.thread-item h3 {
+    margin-top: 0;
+}
+
+.thread-item p {
+    margin-bottom: 0;
+}
+
+
+.thread-item {
+    /* Estilos para cada hilo individual */
+    margin-bottom: 20px; /* Ejemplo de estilo, ajusta según tus necesidades */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.thread-item:hover {
+    background-color: #c7c7c7;
+    cursor: pointer;
+}
+
+.thread-item h3 {
+    /* Estilos para el título del hilo */
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.thread-item p {
+    /* Estilos para la descripción del hilo */
+    color: #666;
+    font-size: 14px;
+}

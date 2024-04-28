@@ -1,0 +1,18 @@
+<!-- thread-list.component.html -->
+<app-header></app-header>
+<div class="container">
+    <div class="thread-container">
+        <div class="h1cont">
+            <h1>Foros Disponibles</h1>
+        </div>
+        <div *ngIf="isAdmin === true">
+            <!-- Botón de creación de hilo -->
+            <button (click)="redirectCreate()">Crear Hilo</button>
+        </div>
+        <div *ngFor="let thread of threads" class="thread-item" (click)="seleccionarThread(thread.id)">
+            <h3>{{ thread.title }}</h3>
+            <p>{{ thread.description }}</p>
+            <!-- Agrega aquí lógica adicional para mostrar otros detalles del hilo de discusión si es necesario -->
+        </div>
+    </div>
+</div>

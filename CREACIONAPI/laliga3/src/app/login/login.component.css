@@ -1,0 +1,219 @@
+* {
+    font-family: "LaLiga Text", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Basic dimensions and centering */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --s: 100px;
+    /* control the size */
+    --c1: #ff7171;
+    --c2: #5c2a2a;
+
+    --_g: var(--c2) 6% 14%, var(--c1) 16% 24%, var(--c2) 26% 34%,
+        var(--c1) 36% 44%, var(--c2) 46% 54%, var(--c1) 56% 64%, var(--c2) 66% 74%,
+        var(--c1) 76% 84%, var(--c2) 86% 94%;
+    background: radial-gradient(100% 100% at 100% 0,
+            var(--c1) 4%,
+            var(--_g),
+            #0008 96%,
+            #0000),
+        radial-gradient(100% 100% at 0 100%,
+            #0000,
+            #0008 4%,
+            var(--_g),
+            var(--c1) 96%) var(--c1);
+    background-size: var(--s) var(--s);
+}
+
+#contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#contenedorcentrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-width: 380px;
+    max-width: 900px;
+    width: 90%;
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#login {
+    width: 100%;
+    max-width: 320px;
+    min-width: 320px;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 10px;
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+#login label {
+    display: block;
+    font-size: 120%;
+    color: #000000;
+    margin-top: 15px;
+}
+
+#login input {
+    font-size: 95%;
+    color: #000000;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+}
+
+#login input::placeholder {
+    color: #000000;
+    opacity: 20%;
+}
+
+#derecho {
+    text-align: center;
+    width: 100%;
+    opacity: 0.70;
+    padding: 20px 50px;
+}
+
+.titulo {
+    font-size: 300%;
+    color: #000000;
+}
+
+.logo-empresa img {
+    width: 100px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgb(218, 218, 218);
+}
+
+.pie-form {
+    font-size: 100%;
+    text-align: center;
+}
+
+.pie-form a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 3px;
+}
+
+.pie-form a:hover {
+    color: #719192;
+}
+
+.botoncillo {
+    position:relative;
+    top: 10px;
+    left: 25%;
+}
+
+button {
+    --primary-color: #ff7171;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+}
+
+button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+    right: 0;
+}

@@ -1,0 +1,209 @@
+* {
+    font-family: "LaLiga Text", Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.noticias-container {
+    margin-top: 190px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+    width: 69%;
+    /* Cambiado a 100% */
+    margin-left: 16%;
+    height: 25%;
+}
+
+.noticia {
+    width: calc(50% - 20px);
+    /* Utiliza calc para calcular el ancho en porcentaje */
+    overflow: hidden;
+    background-color: #ff7171;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Agrega margen inferior */
+    border-radius: 10px;
+}
+
+.imagen-noticia {
+    flex: 1;
+    /* Usa flex para hacer que la imagen ocupe el 50% del ancho */
+    margin-left: 10px;
+}
+
+.imagen-noticia img {
+    width: 90%;
+    /* Utiliza porcentajes para hacer la imagen adaptable */
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.texto-noticia {
+    flex: 1;
+    /* Usa flex para hacer que el texto ocupe el 50% del ancho */
+    padding: 0 20px;
+    /* Agrega un poco de espacio alrededor del texto */
+}
+
+.texto-noticia h1 {
+    margin-top: 10px;
+    font-size: 24px;
+    /* Ajusta el tamaño del título según sea necesario */
+    font-style: oblique;
+}
+
+.texto-noticia p {
+    font-size: 15px;
+    /* Ajusta el tamaño del texto según sea necesario */
+}
+
+.marcadores {
+    height: 100%;
+}
+
+/* Estilos para el contenedor del widget */
+.widget-container {
+    margin: 20px auto;
+    /* Centra horizontalmente y agrega un espacio vertical */
+    padding: 20px;
+    background-color: #ff7171;
+    /* Color de fondo similar al de la tabla */
+    border: 1px solid #ddd;
+    /* Borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    width: 100%;
+    /* Ancho del contenedor */
+    text-align: center;
+    /* Alineación del texto centrada */
+}
+
+.widget-container h2 {
+    font-size: 24px;
+    /* Tamaño de fuente del título */
+    margin-bottom: 10px;
+    /* Espaciado inferior */
+    color: #fff;
+    /* Color del texto del título */
+}
+
+.loader-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Fondo semitransparente para que el loader sea visible */
+    z-index: 9999;
+    /* Asegura que el loader esté por encima de otros elementos */
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typeAndDelete {
+
+    0%,
+    10% {
+        width: 0;
+    }
+
+    45%,
+    55% {
+        width: 6.2em;
+    }
+
+    /* adjust width based on content */
+    90%,
+    100% {
+        width: 0;
+    }
+}
+
+.terminal-loader {
+    border: 0.1em solid #333;
+    background-color: #1a1a1a;
+    color: #0f0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    padding: 1.5em 1em;
+    width: 12em;
+    margin: 100px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    top: 30%;
+}
+
+.terminal-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5em;
+    background-color: #333;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 0 0.4em;
+    box-sizing: border-box;
+}
+
+.terminal-controls {
+    float: right;
+}
+
+.control {
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 0.4em;
+    border-radius: 50%;
+    background-color: #777;
+}
+
+.control.close {
+    background-color: #e33;
+}
+
+.control.minimize {
+    background-color: #ee0;
+}
+
+.control.maximize {
+    background-color: #0b0;
+}
+
+.terminal-title {
+    float: left;
+    line-height: 1.5em;
+    color: #eee;
+}
+
+.text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.2em solid green;
+    /* Cursor */
+    animation: typeAndDelete 4s steps(11) infinite,
+        blinkCursor 0.5s step-end infinite alternate;
+    margin-top: 1.5em;
+}
+
+
+/* Estilo para ocultar el loader */
+.loader-hidden {
+    display: none;
+}

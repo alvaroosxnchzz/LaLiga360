@@ -1,0 +1,12 @@
+<form (submit)="crearHilo()">
+  <label for="titulo">Título:</label>
+  <input type="text" id="titulo" [(ngModel)]="titulo" name="titulo" required>
+
+  <label for="descripcion">Descripción:</label>
+  <textarea id="descripcion" [(ngModel)]="descripcion" name="descripcion"></textarea>
+
+  <label for="contenido">Contenido:</label>
+  <textarea id="contenido" [(ngModel)]="contenido" name="contenido"></textarea>
+
+  <button type="submit">Crear Hilo</button>
+</form>

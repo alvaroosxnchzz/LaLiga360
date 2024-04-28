@@ -1,0 +1,16 @@
+.sombrita {
+    border: 1px solid rgb(223, 223, 223);
+    background-color: #8f4040;
+}
+
+.box {
+    width: calc(100% / 20);
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+.box img {
+    max-width: 100%;
+}

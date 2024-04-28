@@ -1,0 +1,140 @@
+<app-header></app-header>
+
+<!-- Tabla para los jugadores ordenados por goles -->
+<div class="table-container">
+    <table class="table">
+        <caption>
+            <h1>Goleadores de la liga</h1>
+        </caption>
+        <thead>
+            <tr>
+                <th>Puesto</th>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th><img src="../../../assets/gol.png" alt="Goles" width="20px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="colortr" *ngFor="let jugador of displayedJugadoresGoles; let i = index" (click)="irADetalles(jugador.idJugador)">
+                <td>{{ i + 1 }}º</td>
+                <td><img src="../../../assets/{{ jugador.FotoJugador }}"
+                        style="border-radius: 100px; border: 2px solid gray;" width="50px"></td>
+                <td>{{ jugador.Nombre }}</td>
+                <td>{{ jugador.Goles }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="colortr">
+                <td colspan="4">
+                    <button (click)="mostrarTodosGoles()">
+                        <span>{{ buttonText }}</span>
+                    </button>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<!-- Tabla para los jugadores ordenados por asistencias -->
+<div class="table-container">
+    <table class="table">
+        <caption>
+            <h1>Asistentes de la liga</h1>
+        </caption>
+        <thead>
+            <tr>
+                <th>Puesto</th>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th><img src="../../../assets/asistencia.png" alt="Asistencias" width="20px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="colortr" *ngFor="let jugador of displayedJugadoresAsistencias; let i = index" (click)="irADetalles(jugador.idJugador)">
+                <td>{{ i + 1 }}º</td>
+                <td><img src="../../../assets/{{ jugador.FotoJugador }}"
+                        style="border-radius: 100px; border: 2px solid gray;" width="50px"></td>
+                <td>{{ jugador.Nombre }}</td>
+                <td>{{ jugador.Asistencias }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="colortr">
+                <td colspan="4">
+                    <button (click)="mostrarTodosAsistencias()">
+                        <span>{{ buttonTextAsistencias }}</span>
+                    </button>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<!-- Tabla para los jugadores ordenados por tarjetas amarillas -->
+<div class="table-container">
+    <table class="table">
+        <caption>
+            <h1>Jugadores con más <img src="../../../assets/amarilla.png" alt="Amarillas" width="45px"></h1>
+        </caption>
+        <thead>
+            <tr>
+                <th>Puesto</th>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th><img src="../../../assets/amarilla.png" alt="Amarillas" width="20px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="colortr" *ngFor="let jugador of displayedJugadoresAmarillas; let i = index" (click)="irADetalles(jugador.idJugador)">
+                <td>{{ i + 1 }}º</td>
+                <td><img src="../../../assets/{{ jugador.FotoJugador }}"
+                        style="border-radius: 100px; border: 2px solid gray;" width="50px"></td>
+                <td>{{ jugador.Nombre }}</td>
+                <td>{{ jugador.TarjetasAmarillas }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="colortr">
+                <td colspan="4">
+                    <button (click)="mostrarTodosAmarillas()">
+                        <span>{{ buttonTextAmarillas }}</span>
+                    </button>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<!-- Tabla para los jugadores ordenados por tarjetas rojas -->
+<div class="table-container">
+    <table class="table">
+        <caption>
+            <h1>Jugadores con más <img src="../../../assets/roja.png" alt="Tarjetas Rojas" width="45px"></h1>
+        </caption>
+        <thead>
+            <tr>
+                <th>Puesto</th>
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th><img src="../../../assets/roja.png" alt="Tarjetas Rojas" width="20px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="colortr" *ngFor="let jugador of displayedJugadoresRojas; let i = index" (click)="irADetalles(jugador.idJugador)">
+                <td>{{ i + 1 }}º</td>
+                <td><img src="../../../assets/{{ jugador.FotoJugador }}"
+                        style="border-radius: 100px; border: 2px solid gray;" width="50px"></td>
+                <td>{{ jugador.Nombre }}</td>
+                <td>{{ jugador.TarjetasRojas }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="colortr">
+                <td colspan="4">
+                    <button (click)="mostrarTodosRojas()">
+                        <span>{{ buttonTextRojas }}</span>
+                    </button>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
